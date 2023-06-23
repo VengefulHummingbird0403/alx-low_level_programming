@@ -1,5 +1,3 @@
-2-mul.c
-
 #include "main.h"
 /**
  * mul - multiply 2 int
