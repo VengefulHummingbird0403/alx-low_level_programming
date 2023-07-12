@@ -1,18 +1,16 @@
 #include "main.h"
-/*
- * function is responsible for outputting a string to standard output
- * Single Argument; pointer to an array(string)
- * Return:void
- */
-_puts(char *s)
-#include<stdio.h>
 /**
-*  * main - Entry point
-*   *
-*    * Return: Always 0 (Success)
-*/
-int main(void)
+ * _puts - prints the strings followed by a new line
+ * @str: the strings to be printed
+ *
+ */
+void _puts(char *str)
 {
-puts("\"Programming is like building a multilingual puzzle");
-return (0);
+int p = 0;
+while (str[p] != '\0')
+{
+_putchar(str[p]);
+p++;
+}
+_putchar('\n');
 }
