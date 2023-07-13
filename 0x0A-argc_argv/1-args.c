@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-#include "main.h"
-
-
 
 /**
 
@@ -12,19 +9,16 @@
 
 * @argv: array of arguments
 
-*
-
-* Return: Always 0 (Success)
+* Return: 0 on success
 
 */
 
 
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv __attribute__((unused)))
 
 {
 
-(void) argv; /*Ignore argv*/
 
 printf("%d\n", argc - 1);
 
