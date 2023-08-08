@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *create_bOF(char *file);
-void close_file(int file_Descriptor);
+void close_file(int FD_VALUE);
 
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
@@ -31,15 +31,15 @@ char *create_bOF(char *file)
  * close_file - Closes file descriptors.
  * @file_Descriptor: The file descriptor to be closed.
  */
-void close_file(int file_Descriptor)
+void close_file(int FD_VALUE)
 {
 	int c;
 
-	c = close(file_Descriptor);
+	c = close(FD_VALUE);
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_Descriptor);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", FD_VALUE);
 		exit(100);
 	}
 }
